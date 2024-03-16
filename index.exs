@@ -2,7 +2,7 @@ assigns = %{
   og_image: "https://github.com/lubien.png",
   canonical_url: "https://vagas.lubien.dev",
   page_title: "Vagas - lubien.dev",
-  page_description: "All profiles links of Samir Paul available here",
+  page_description: "Vagas para desenvolvedores de múltiplas fontes (brasileiras e estrangeiras)",
   owner_name: "Lubien",
   owner_website: "lubien.dev",
   twitter_handle: "joao_lubien",
