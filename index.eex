@@ -868,13 +868,13 @@
                 <input type="hidden" value="creator-page" id="page-type" />
                 <img
                     class="display-image m-auto"
-                    src="https://github.com/<%= @github_username %>.png"
-                    alt="<%= @owner_name %>"
+                    src="<%= @page_logo %>"
+                    alt="<%= @page_title %>"
                 />
                 <h2
                     class="page-title page-text-color page-text-font mt-16 text-center"
                 >
-                    <%= @owner_name %>
+                    <%= @page_title %>
                 </h2>
 
                 <div class="mt-24">
