@@ -8,19 +8,19 @@
         />
         <link rel="shortcut icon" href="favicon.ico" type="image/webp" />
         <link rel="icon" href="favicon.ico" type="image/webp" />
-        <meta name="description" content="All profiles links of Samir Paul available here." />
-        <meta property="og:title" content="Vagas - lubien.dev" />
-        <link rel="canonical" href="https://vagas.lubien.dev" />
-        <meta property="og:url" content="https://vagas.lubien.dev" />
-        <meta property="og:description" content="All profiles links of Samir Paul available here." />
-        <meta property="og:image:secure_url" content="https://github.com/lubien.png" />
-        <meta property="og:image" content="https://github.com/lubien.png" />
+        <meta name="description" content="<%= @page_description %>." />
+        <meta property="og:title" content="<%= @page_title %>" />
+        <link rel="canonical" href="<%= @canonical_url %>" />
+        <meta property="og:url" content="<%= @canonical_url %>" />
+        <meta property="og:description" content="<%= @page_description %>." />
+        <meta property="og:image:secure_url" content="<%= @og_image %>" />
+        <meta property="og:image" content="<%= @og_image %>" />
         <meta property="profile:username" content="samirpaul" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Vagas - lubien.dev" />
-        <meta name="twitter:image" content="https://github.com/lubien.png" />
-        <meta name="twitter:url" content="https://vagas.lubien.dev" />
-        <title>Vagas - lubien.dev</title>
+        <meta name="twitter:title" content="<%= @page_title %>" />
+        <meta name="twitter:image" content="<%= @og_image %>" />
+        <meta name="twitter:url" content="<%= @canonical_url %>" />
+        <title><%= @page_title %></title>
         <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico" />
         <link rel="manifest" href="manifest.json" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -868,13 +868,13 @@
                 <input type="hidden" value="creator-page" id="page-type" />
                 <img
                     class="display-image m-auto"
-                    src="https://github.com/lubien.png"
-                    alt="Lubien"
+                    src="https://github.com/<%= @github_username %>.png"
+                    alt="<%= @owner_name %>"
                 />
                 <h2
                     class="page-title page-text-color page-text-font mt-16 text-center"
                 >
-                    Lubien
+                    <%= @owner_name %>
                 </h2>
 
                 <div class="mt-24">
@@ -883,16 +883,16 @@
                         <a
                             target="_blank"
                             class="page-item-each flex-both-center py-10"
-                            href="https://www.linkedin.com/in/lubien"
+                            href="https://www.linkedin.com/in/<%= @linkedin_handle %>"
                             data-type="page_item"
                         >
                             <img
                                 class="link-each-image"
                                 src="linkedin.png"
-                                alt="LinkedIn @ lubien"
+                                alt="LinkedIn @ <%= @linkedin_handle %>"
                             />
                             <span class="item-title text-center"
-                                >LinkedIn @ lubien</span
+                                >LinkedIn @ <%= @linkedin_handle %></span
                             >
                         </a>
                     </div>
@@ -901,16 +901,16 @@
                         <a
                             target="_blank"
                             class="page-item-each flex-both-center py-10"
-                            href="https://twitter.com/joao_lubien"
+                            href="https://twitter.com/<%= @twitter_handle %>"
                             data-type="page_item"
                         >
                             <img
                                 class="link-each-image"
                                 src="tw.png"
-                                alt="Twitter @ joao_lubien"
+                                alt="Twitter @ <%= @twitter_handle %>"
                             />
                             <span class="item-title text-center"
-                                >Twitter @ joao_lubien</span
+                                >Twitter @ <%= @twitter_handle %></span
                             >
                         </a>
                     </div>
@@ -919,16 +919,16 @@
                         <a
                             target="_blank"
                             class="page-item-each flex-both-center py-10"
-                            href="https://lubien.dev/"
+                            href="https://<%= @owner_website %>/"
                             data-type="page_item"
                         >
                             <img
                                 class="link-each-image"
-                                src="https://github.com/lubien.png"
-                                alt="Website @ lubien.dev"
+                                src="https://github.com/<%= @github_username %>.png"
+                                alt="Website @ <%= @owner_website %>"
                             />
                             <span class="item-title text-center"
-                                >Website @ lubien.dev</span
+                                >Website @ <%= @owner_website %></span
                             >
                         </a>
                     </div>
@@ -937,50 +937,36 @@
                         <a
                             target="_blank"
                             class="page-item-each flex-both-center py-10"
-                            href="https://github.com/lubien"
+                            href="https://github.com/<%= @github_username %>"
                             data-id="261685"
                             data-type="page_item"
                         >
                             <img
                                 class="link-each-image"
                                 src="git.png"
-                                alt="GitHub @ lubien"
+                                alt="GitHub @ <%= @github_username %>"
                             />
                             <span class="item-title text-center"
-                                >GitHub @ lubien</span
+                                >GitHub @ <%= @github_username %></span
                             >
                         </a>
                     </div>
 
-                    
+                    <%= for entry <- @extra_urls do %>
                     <div class="page-item-wrap relative">
                         <div class="page-item flex-both-center absolute"></div>
                         <a
                             target="_blank"
                             class="page-item-each flex-both-center py-10"
-                            href="https://t.me/vagas_dev"
+                            href="<%= entry.url %>"
                             data-type="page_item"
                         >
                             <span class="item-title text-center"
-                                >Telegram - Vagas Dev</span
+                                ><%= entry.title %></span
                             >
                         </a>
                     </div>
-                    
-                    <div class="page-item-wrap relative">
-                        <div class="page-item flex-both-center absolute"></div>
-                        <a
-                            target="_blank"
-                            class="page-item-each flex-both-center py-10"
-                            href="https://chat.whatsapp.com/GKkgXbjgvpNHev19mwa4f0"
-                            data-type="page_item"
-                        >
-                            <span class="item-title text-center"
-                                >WhatsApp - Vagas Dev</span
-                            >
-                        </a>
-                    </div>
-                    
+                    <% end %>
                 </div>
             </div>
         </div>
