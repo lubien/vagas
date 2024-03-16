@@ -1,5 +1,5 @@
 assigns = %{
-  og_image: "https://github.com/lubien.png",
+  og_image: "https://vagas.lubien.dev/social_media.jpeg",
   canonical_url: "https://vagas.lubien.dev",
   page_title: "Vagas - lubien.dev",
   page_description: "Vagas para desenvolvedores de múltiplas fontes (brasileiras e estrangeiras)",
